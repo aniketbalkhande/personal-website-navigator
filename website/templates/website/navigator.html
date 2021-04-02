@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- ************************* -->
+<div class="container-fluid">
+   <div class="inner">
+      <div class="row">
+         <div class="websites col-5">
+            <div class="content">
+               {% for website in websites %}
+               <a href="{{website.url}}" target="_blank">
+                  <h1>{{website.website}}</h1>
+               </a>
+               <!-- <p>{{website.description}}</p> -->
+                {% endfor %}
+            </div>
+         </div>
+         <div class="quote-box col-7">
+            <div class="column-quote">
+               <p class="quote"><span class="quetation">"</span> Everybody in this country should learn to program a computer, because it teaches you how to think. <span class="quetation">"</span>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<!-- ********************************* -->
+   {% endblock %}

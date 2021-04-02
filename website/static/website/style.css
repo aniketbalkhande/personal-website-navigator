@@ -1,0 +1,82 @@
+*{ 
+   padding: 0;
+   margin: 0; 
+}body {
+   background-color:#fff;
+   font-family: 'Roboto';
+}.inner {
+   padding: 50px;
+}.websites {
+   padding: 0;
+   margin: 0;
+}.websites .content {
+   text-align: left;
+   padding: 20px;
+}a {
+   color: #000;
+}a:hover {
+   text-decoration: none;
+   color: #5ce1e6;
+}.websites .content a h1  {
+   font-size: 30px;
+   font-weight: bolder;
+   margin-bottom: 25px ;
+}.quote-box {
+   position: relative;
+   background-color:#222222;
+   padding: 0;
+   /* padding-top: 20px;  */
+   width: 100%;
+}.column-quote {
+   width: 100%;
+   height: auto;
+   padding: 40px;
+   margin:0;
+}.quote {
+   font-size:30px;
+   font-weight:bold;
+   line-height: 1;
+   text-align: center;
+   color: #fff;
+   font-family: 'Roboto';
+}.quetation {
+    font-size: 70px;
+    color: #7ed957;
+}
+
+a.navbar-brand {
+   font-family: 'ABeeZee', sans-serif;
+}
+.col-5 {
+   font-family: 'Open Sans', sans-serif;
+
+}
+
+.row {
+   max-width: 100%;
+   position: relative;
+}#add_form{
+   position: absolute;
+   right: 16vw;
+   padding-top: 20px;
+   border: 1px solid #000;
+}p {
+   display: flex;
+}label {
+   width: 40%;
+   font-size: 20px;
+   font-weight: bolder;
+}input {
+   width: 60%;
+}#add-button {
+   text-align: center;
+}
+
+#profile {
+   margin-left: 20px;
+}
+a img {
+   height: 30px;
+   width: 30px;
+   margin-top: 5px ;
+}

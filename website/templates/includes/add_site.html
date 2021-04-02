@@ -1,0 +1,23 @@
+<div class="row">
+   <div class="col-5" id="add_form" >
+
+      <div class="form-group">
+         <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="" value="">
+            <p>
+               <label for="id_website">Site Name</label>
+               <input type="text" name="website" class="form-control" maxlength="255" required="" id="id_website">
+            </p>
+            <p>
+               <label for="id_url">Url</label> 
+               <input type="url" name="url" class="form-control" maxlength="255" required="" id="id_url">
+            </p>
+            <div id="add-button" >
+               <button type="submit" class="btn btn-success btn-lg">Add</button>
+            </div>
+
+         </form>
+      </div>
+   </div>
+</div>
