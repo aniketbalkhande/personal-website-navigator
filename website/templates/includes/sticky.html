@@ -1,0 +1,38 @@
+<script type="text/javascript">
+
+$(function() {
+  if ($('#sticky').length)
+  {
+     var el = $('#sticky');
+     var stickyTop = $('#sticky').offset().top;
+
+     $(window).scroll(function(){
+        var windowTop = $(window).scrollTop();
+         if (stickyTop < windowTop+106) {
+            el.css({
+               position: 'fixed',
+               'margin-right': '5vw',
+               top: 106,
+            });
+         } else {
+            el.css({
+               'position': 'static',
+               'margin-right': '0vw'
+         });
+         }
+      });
+   }
+});
+</script>
+
+
+<script>
+   $(document).ready(function(){
+      window.setTimeout(function() {
+         $(".alert").fadeTo(500, 0).slideUp(500, function(){
+            $(this).remove();
+            });
+      }, 3000);
+   });
+</script>
+

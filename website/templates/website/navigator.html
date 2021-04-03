@@ -7,18 +7,56 @@
       <div class="row">
          <div class="websites col-5">
             <div class="content">
+               <!-- {% if messages %}
+                  <ul class="messages" >
+                     {% for message in messages %}
+                     <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {{ message }}
+                     </li>
+                     {% endfor %}
+                  </ul>
+               {% endif %} -->
+               
+               {% if messages %}
+                  {% for msg in messages %}
+                     <div class="alert alert-info alert-dismissable">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        {{msg.message}}
+                     </div>
+                  {% endfor %}
+               {% endif %}
+
+            <div class="row">
                {% for website in websites %}
-               <a href="{{website.url}}" target="_blank">
-                  <h1>{{website.website}}</h1>
-               </a>
-               <!-- <p>{{website.description}}</p> -->
-                {% endfor %}
+               <div class="col-10">
+                  <a href="{{website.url}}" target="_blank">
+                     <h1>{{website.website}}</h1>
+                  </a>
+               </div>
+               <div class="col-1">
+                  <a href="#">            
+                     <img src="{% static 'edit.png' %}" alt="">
+                  </a>
+               </div>
+               <div class="col-1">
+                  <form action="{% url 'website:deleteWebsite' website.id %}" method="POST">
+                     {% csrf_token %}  
+                     <button type="submit"  style="border: 0;"><img src="{% static 'delete1.png'%}" alt=""></button>
+                  </form>   
+               </div>
+               {% endfor %}
+            </div>
             </div>
          </div>
-         <div class="quote-box col-7">
-            <div class="column-quote">
-               <p class="quote"><span class="quetation">"</span> Everybody in this country should learn to program a computer, because it teaches you how to think. <span class="quetation">"</span>
-               </p>
+      
+         <!-- Use quotes api here -->
+         <div class="quote-box col-7" >
+            <div id="sticky">
+               <div class="column-quote">
+                  <p class="quote"><span class="quetation">"</span> Everybody in this country should learn to program a computer, because it teaches you how to think. <span class="quetation">"</span>
+                  </p>
+               </div>
+               {% include 'includes/add_site.html' %}
             </div>
          </div>
       </div>
